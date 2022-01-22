@@ -1,16 +1,16 @@
 <%- include('components/header.ejs') %>
 
 
-<% getPost.forEach((post) =>{ %>
+<% blog.forEach((blog) =>{ %>
 <section  id="create">
     <div class="heading">
         <h1>Create new blog</h1>
     </div>
     <div class="inside">
-        <form action="/edit/:<%=post.post_id%>" method="POST">
-            <input name='title' value='<%=post.title%>'  type="text">
-            <input name='image_url' value='<%=post.image_url%>' type="text">
-            <textarea name="content" id="" cols="100" rows="10"><%=post.content%></textarea>
+        <form action="/edit/:<%=blog.post_id%>?_method=put" method="post">
+            <input type="text" name='title' value='<%=blog.title%>'>
+            <input type="text" name='image_url' value='<%=blog.image_url%>'>
+            <textarea name='content' id="" cols="100" rows="10"><%=blog.content%></textarea>
             <div class="btn-container">
                 <button class="btn">Update</button>
             </div>
