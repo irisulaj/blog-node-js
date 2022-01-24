@@ -27,6 +27,12 @@ router.get("/create", (req, res) =>{
 
 })
 
+router.get("/register", (req, res) =>{
+
+  res.render("register.ejs")
+
+})
+
 router.post("/create", (req, res) =>{
 
   const post = req.body

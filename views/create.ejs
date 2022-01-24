@@ -1,16 +1,19 @@
 <%- include('components/header.ejs') %>
 
 <section  id="create">
-    <div class="heading">
+    <div class="newsfeed">
         <h1>Create new blog</h1>
     </div>
     <div class="inside">
         <form action="/create" method='POST'>
-            <input name='title' placeholder="title" type="text">
-            <input name='image_url' placeholder="img-url" type="text">
-            <textarea name="content" id="" cols="100" rows="10"></textarea>
+            <input name='title' placeholder="title" type="text" class="form-control">
+            <br>
+            <input name='image_url' placeholder="img-url" type="text" class="form-control">
+            <br>
+            <textarea name="content" id="" cols="100" rows="10" class="form-control"></textarea>
+            <br>
             <div class="btn-container">
-                <button class="btn">Create</button>
+                <button class="btn btn-success">Create</button>
             </div>
         </form>
     </div>

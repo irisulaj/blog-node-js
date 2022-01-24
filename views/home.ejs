@@ -1,34 +1,70 @@
 
 <%- include('components/header.ejs') %>
-<div class="create-link-container">
-    <a  class="create-link" href="/create"> create new blog</a>
-</div>
-<% blogPost.forEach((blog) =>{ %>
 
 
 
-    <section id="all-contents">
-    <div class="inside">
-        <div class="title"><%=blog.title%></div>
-        <div class="image-container">
-            <img class="image" src="<%=blog.image_url%>" alt="image">
-        </div> 
-        <span></span>
-     
-        <div class="btn-container">
-            <a class="btn" href="show/<%=blog.post_id%>">Show more</a>
+    <div class = "container-fluid">
+      <div class = "row newsfeed">
+       News Feed
+      </div>
+      <div class = "row row-height">
+       
+        <div class = "col-md-4 left">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+            do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+             mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+               irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+               
+               
+         
         </div>
-        <p class=""><%=blog.created_at%></p>
-        <div class="hr"></div>
+        
+        <div class = "col-md-4 mid">
+          
+          <% blogPost.forEach((blog) =>{ %>
+   
+
+
+            <section id="all-contents">
+            <div class="inside">
+                <div class="title"><%=blog.title%></div>
+                <div class="image-container">
+                    <img class="image" src="<%=blog.image_url%>" alt="image">
+                </div> 
+                <span></span>
+             <br>
+                <div class="btn-container">
+                    <a class="btn btn-primary" href="show/<%=blog.post_id%>">Show more</a>
+                </div>
+                <p class=""><%=blog.created_at%></p>
+               <hr>
+            </div>
+            
+          
+        </section>
+       
+        <% })%>
+                  
+      
+        </div>
+        <div class = "col-md-4 right">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+           mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+             irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        </div>
+      </div>
     </div>
-    
-  
-</section>
-<% })%>
-
-
-
-<%- include('components/footer.ejs') %>
-
-
-
+    <%- include('components/footer.ejs') %>
